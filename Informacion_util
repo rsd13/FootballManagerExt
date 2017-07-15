@@ -1,0 +1,30 @@
+Para ejecutar tests: 
+php phpunit.phar
+Si no está, antes ejecutar: wget https://phar.phpunit.de/phpunit-5.7.phar
+
+Para recompilar modelos y seeds:
+php artisan migrate:refresh --seed
+
+Para crear la BBDD:
+touch database/database.sqlite
+
+Para hacer migraciones:
+php artisan make:migration create_TABLA_table
+
+Para hacer seeders:
+php artisan make:seeder CLASETableSeeder
+
+Para compilar seeds:
+php artisan db:seed
+Si falla, una posible solución es ejecutar:
+composer dump-autoload
+Para rehacer los ficheros automáticos del proyecto.
+Tras eso compilar.
+
+Si sale error de encriptación, es mejor rehacer .env
+y crear una clave:
+sudo cp .env.example .env
+sudo php artisan key:generate
+
+Para crear un controlador automáticamente se emplea:
+php artisan make:controller UserController --resource

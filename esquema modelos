@@ -1,0 +1,11 @@
+Modelo
+      Metodos
+            getModelo(id) -> muestra los datos de ese modelo
+            getModelos(datos) -> muestra los datos (solo los importantes) de todos los modelos
+                  Request son los dos datos para el filtrado
+            getForm() -> devuelve el formulario para crear o modificar un nuevo modelo
+
+            crearModificarModelo(Request) -> crea o modifica un modelo (metodo para post)
+                  Request son los datos de ese modelo (comprobar id == null para saber si es crear o modificar)
+
+            borrarModelo(id) -> borra el modelo con ese id

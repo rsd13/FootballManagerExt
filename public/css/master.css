@@ -1,0 +1,81 @@
+body{
+      background: url("/images/fondo.png");
+      background-color: lightgrey;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+}
+
+hr{
+      color: #454545;
+      background-color: #454545;
+      height: 1px;
+}
+
+
+.flex-center {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+}
+.full-height {
+      height: 100vh;
+}
+
+.text-right{
+      text-align: right;
+}
+
+.position-ref {
+      position: relative;
+}
+/**
+      Navbar
+*/
+      .navbar-brand {
+        padding: 0px;
+      }
+      .navbar-brand>img {
+        height: 100%;
+        padding: 10px;
+        width: auto;
+      }
+      .barraNav .navbar-brand {
+        height: 100px;
+      }
+      .barraNav .nav >li >a {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-size: 20px;
+      }
+      .barraNav .navbar-toggle {
+        padding: 10px;
+        margin: 30px 15px 25px 0;
+      }
+      .contenedor{
+            margin-top: 100px;
+            background-color: #F0F0F0;
+            min-height: 80%;
+      }
+
+.well{
+      background-color: rgb(246, 246, 246);
+}
+
+.espaciado{
+      padding: auto 5px auto 5px;
+}
+
+.fondo{
+      background-color: #F5F5F5;
+}
+
+.rojo{
+      background-color: red;
+}
+.azul{
+      background-color: blue;
+}
+.amarillo{
+      background-color: yellow;
+}
