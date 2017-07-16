@@ -25,6 +25,11 @@
                               <li><a href="{{action('PartidoController@editarPartidos')}}">Modificar</a></li>
                         </ul>
                   </li>
+
+                  <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th">Mensajes</a>
+                  </li>
+
                   @if(Auth::check() and Auth::user()->rol > 2)
                   <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th"></span> Equipos <span class="caret"></span></a>
