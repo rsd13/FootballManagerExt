@@ -14,7 +14,7 @@ class CreateMensajesTable extends Migration
     public function up()
     {
 
-      Schema::create('mensajes', function (Blueprint $table) {
+      Schema::create('mensaje', function (Blueprint $table) {
         $table->increments('id');
 
         $table->integer('usuario1_id')->unsigned()->nullable();
@@ -26,7 +26,7 @@ class CreateMensajesTable extends Migration
         $table->string('asunto')->nullable();
         $table->string('mensaje')->nullable();
         $table->timestamps();
-      }
+      });
     }
 
     /**
