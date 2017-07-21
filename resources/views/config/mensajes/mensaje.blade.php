@@ -1,4 +1,53 @@
-<div class="container-fluid">
+@extends('layouts.master')
+@section('title', 'Crear partido')
+@section('content')
+@include('cabecera',array('section'=>'Inicio'))
+
+
+
+<div class="contenedor row">
+      @include('config/configuracion')
+      <div class="col-md-10 col-md-offset-1">
+            <h2>Enviar mensaje</h2>
+            <br>
+            {{-- Muestra errores --}}
+                  @if (count($errors) > 0)
+                        <ul>
+                        @foreach ($errors->all() as $error)
+                              <div class="alert alert-danger">
+                                    <a href="#" class="alert-link">{{ $error }}</a>
+                              </div>
+                        @endforeach
+                        </ul>
+                @endif
+
+
+                <div class="row form-group">
+                      <div class="col-md-4">
+                            <style>select:invalid { color: gray; }</style>
+                            <select class="form-control" id="equipoLocal" placeholder="equipoLocal" name="equipoLocal" required>
+                            <option value="Equipo" disabled selected hidden>Equipo</option>
+
+
+
+                            </select>
+                      </div>
+                </div>
+      </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  {{-- <div class="container-fluid">
     <div class="row">
 		<div class="col-md-3">
         	 <div class="row chats-row">
@@ -135,4 +184,4 @@
             </div>
 		</div>
 	</div>
-</div>
+</div> --}}

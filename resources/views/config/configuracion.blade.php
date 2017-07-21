@@ -27,7 +27,11 @@
                   </li>
 
                   <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th">Mensajes</a>
+                        <a href=""  data-toggle="dropdown"><span class="glyphicon glyphicon-th">Mensajes</a>
+                        <ul class="dropdown-menu forAnimate" role="menu">
+                              <li><a href="{{action('MensajeController@getMensajes')}}">Enviar</a> </li>
+                              <li><a href="">Bandeja</a></li>
+                        </ul>
                   </li>
 
                   @if(Auth::check() and Auth::user()->rol > 2)

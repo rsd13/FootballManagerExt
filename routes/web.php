@@ -110,5 +110,11 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/editar/temporada','TemporadaController@editar');
             Route::get('/eliminar/temporada/{id}','TemporadaController@eliminarTemporada');
             Route::post('/modificar/temporada/{id}','TemporadaController@modificarTemporda');
+
+            //Mensajes
+
+            Route::get('/mensajes','MensajeController@getMensajes');
+
+
       });
 });

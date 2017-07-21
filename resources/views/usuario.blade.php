@@ -139,7 +139,7 @@
                               <div class="row">
                                     @if(Auth::check())
                                     @if(Auth::user()->id == $usuario->id or Auth::user()->rol>=1)
-                                    <div class="col-md-3 col-md-offset-5 col-lg-3 col-lg-offset-5">
+                                    <div class="col-md-3 col-lg-3">
                                           <a href="{{ action('UsuarioController@getFormUpdate', ['id' => $usuario->id]) }}" class="btn btn-success btn-block">Editar</a>
                                     </div>
                                     @if(Auth::user()->rol>1)
@@ -151,6 +151,12 @@
                                           @endif
 
                                     </div>
+
+                                    @if(Auth::user()->rol>=1)
+                                      <div class="col-md-3 col-md-offset-4 col-lg-3 col-lg-offset-3">
+                                          <a href="{{action('MensajeController@getMensajes')}}" class="btn btn-primary">Mensaje</a>
+                                      </div>
+                                    @endif
                                     @endif
                                     @endif
                                     @endif

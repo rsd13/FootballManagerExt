@@ -15,5 +15,13 @@ use Intervention\Image\ImageManagerStatic as Image;
 class MensajeController extends Controller
 {
 
+  public function getMensajes(){
+
+
+      return view('config/mensajes/mensaje');
+
+      return back();
+
+  }
 
 }

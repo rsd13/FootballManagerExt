@@ -31,7 +31,7 @@ class CompeticionController extends Controller
             return view('config/editarCompeticion',['competiciones' => null])->withErrors($validator->getMessageBag());
         }
         return back();
-        
+
     }
 
     public function eliminarCompeticion($id){
@@ -44,8 +44,8 @@ class CompeticionController extends Controller
 
         $competicion->delete();
         return back();
-        
-        
+
+
     }
 
     public function editarCompeticion($id,Request $request){
@@ -63,13 +63,13 @@ class CompeticionController extends Controller
             $validator->getMessageBag()->add('unique','Error, existe ya una competicion con el mismo nombre');
             return back()->withErrors($validator)->withInput();
         }
-        
+
     }
 
     public function editar(){
         //consigo todos los equipo
         $competiciones = Competicion::all();
-        
+
         return view('config/editarCompeticion',['competiciones' => $competiciones]);
     }
 
